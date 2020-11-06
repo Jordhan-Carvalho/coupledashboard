@@ -61,7 +61,7 @@ const DivisorLine = styled.div`
   background: #3c096c;
 `;
 
-type myProps = {
+type LinkProps = {
   active: boolean;
 };
 
@@ -72,9 +72,9 @@ const LinkContainer = styled.div`
   justify-content: flex-end;
   align-items: center;
   border-radius: 20px 0 0 20px;
-  box-shadow: ${(props: myProps) =>
+  box-shadow: ${(props: LinkProps) =>
     props.active ? "inset 0px 4px 4px rgba(0, 0, 0, 0.25)" : ""};
-  background: ${(props: myProps) =>
+  background: ${(props: LinkProps) =>
     props.active
       ? "linear-gradient(90deg, rgba(255, 255, 255, 0.71) 5.26%, rgba(237, 226, 249, 0) 90.79%)"
       : "transparent"};

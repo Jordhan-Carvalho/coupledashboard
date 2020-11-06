@@ -24,11 +24,10 @@ export default function App() {
 const GlobalStyle = createGlobalStyle`
 :root {
   --mainPurple: #66438F;
-  --fontMontserrat: 'Montserrat', sans-serif;
 }
 
 body {
-  font-family: var(----fontMontserrat);
+  font-family: 'Montserrat', sans-serif;
 }
 
 #root {
@@ -45,5 +44,5 @@ const MainContainer = styled.div`
   margin: auto;
   width: 80%;
   height: 100%;
-  max-width: 1500px;
+  max-width: 1350px;
 `;
