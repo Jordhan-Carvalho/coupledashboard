@@ -1,27 +1,30 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function GeneralView() {
+import Button from "../common/Button";
+
+export default function InvestmentsBox() {
   return (
-    <GeneralViewContainer>
-      <Title>Visão geral</Title>
+    <InvestmentsBoxContainer>
+      <Title>Investimentos</Title>
       <InfoContainer>
-        <Paragraph>Total aprisionado</Paragraph>
+        <Paragraph>Dinheiro Investido</Paragraph>
         <p>R$ 107,000.22</p>
       </InfoContainer>
       <InfoContainer>
-        <Paragraph>Total disponível</Paragraph>
-        <p>R$ 10,000.22</p>
+        <Paragraph>Rendimento Mensal</Paragraph>
+        <p>R$ 4,000.22</p>
       </InfoContainer>
       <InfoContainer>
-        <Paragraph>Total</Paragraph>
-        <p>R$ 117,000.22</p>
+        <Paragraph>Porcentagem média</Paragraph>
+        <p>4,06%</p>
       </InfoContainer>
-    </GeneralViewContainer>
+      <Button text="Detalhes" secondary />
+    </InvestmentsBoxContainer>
   );
 }
 
-const GeneralViewContainer = styled.article`
+const InvestmentsBoxContainer = styled.article`
   width: 40%;
   height: 230px;
   background: rgba(255, 255, 255, 0.5);
@@ -31,13 +34,14 @@ const GeneralViewContainer = styled.article`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 0;
 `;
 
 const Title = styled.h2`
   font-weight: bold;
   font-size: 20px;
   color: #66438f;
-  margin: 20px 0 10px 0;
+  margin-bottom: 10px;
 `;
 
 const InfoContainer = styled.div`
@@ -46,13 +50,6 @@ const InfoContainer = styled.div`
   align-items: center;
   margin: 10px 0;
   width: 70%;
-  &:nth-child(4) {
-    margin-top: 15px;
-    margin-bottom: 20px;
-  }
-  &:nth-child(4) p:last-child {
-    font-weight: bold;
-  }
 `;
 
 const Paragraph = styled.p`

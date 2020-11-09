@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 import Button from "../common/Button";
 
-export default function InputsView() {
+export default function InputsBox() {
   return (
-    <InputsViewContainer>
+    <InputsBoxContainer>
       <Title>Lançamentos e teto de gastos</Title>
       <ButtonsRow>
         <Button text="+ Entrada" />
@@ -15,11 +15,11 @@ export default function InputsView() {
         <Button text="- Saida" secondary />
         <Button text="Teto Gasto Extra" />
       </ButtonsRow>
-    </InputsViewContainer>
+    </InputsBoxContainer>
   );
 }
 
-const InputsViewContainer = styled.article`
+const InputsBoxContainer = styled.article`
   width: 50%;
   height: 230px;
   background: rgba(255, 255, 255, 0.5);
