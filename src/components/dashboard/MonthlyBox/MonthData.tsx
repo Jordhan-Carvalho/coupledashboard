@@ -6,16 +6,16 @@ export default function MonthData() {
   return (
     <MonthDataContainer>
       <InfoContainer>
-        <Paragraph>Total</Paragraph>
-        <p>R$ 117,000.22</p>
+        <Paragraph>Entradas</Paragraph>
+        <p>R$ 6,500.00</p>
       </InfoContainer>
       <InfoContainer>
-        <Paragraph>Total</Paragraph>
-        <p>R$ 117,000.22</p>
+        <Paragraph>Saídas</Paragraph>
+        <p>R$ 4,500.22</p>
       </InfoContainer>
       <InfoContainer>
-        <Paragraph>Total</Paragraph>
-        <p>R$ 117,000.22</p>
+        <Paragraph>Lucro</Paragraph>
+        <p>R$ 2,000.22</p>
       </InfoContainer>
       <Button text="Ver mais" secondary />
     </MonthDataContainer>
@@ -27,22 +27,18 @@ const MonthDataContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 20%;
+  width: 23%;
   height: 250px;
 `;
 
 const InfoContainer = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   margin: 10px 0;
   width: 70%;
-  &:nth-child(4) {
-    margin-top: 15px;
-    margin-bottom: 20px;
-  }
-  &:nth-child(4) p:last-child {
-    font-weight: bold;
+  & p:last-child {
+    font-size: 14px;
   }
 `;
 

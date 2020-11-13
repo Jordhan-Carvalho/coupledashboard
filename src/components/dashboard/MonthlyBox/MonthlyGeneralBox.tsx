@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import CatPieChart from "./CatPieChart";
 import MonthData from "./MonthData";
 import MultiBarChart from "./MultiBarChart";
+import ArrowDown from "../../../assets/arrow-down.svg";
 
 export default function MonthlyGeneralBox() {
+  const [month, setMonth] = useState("Novembro");
+
   return (
     <MonthlyGeneralBoxContainer>
-      <Title>Novembro</Title>
+      <Title value={month} onChange={(e) => setMonth(e.target.value)}>
+        <option value="novembro">Novembro</option>
+        <option value="dezembro">Dezembro</option>
+      </Title>
       <MonthInfoContainer>
         <MonthData />
         <MultiBarChart />
@@ -39,9 +45,23 @@ const MonthInfoContainer = styled.div`
   width: 100%;
 `;
 
-const Title = styled.h2`
+const Title = styled.select`
   font-weight: bold;
   font-size: 20px;
   color: #66438f;
   margin: 15px 0 20px 0;
+  text-transform: capitalize;
+  outline: none;
+  border: none;
+  background: transparent;
+  width: 150px;
+  cursor: pointer;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; /* Remove default arrow */
+  background-image: url(${ArrowDown}), none; /* Add custom arrow */
+  background-size: 10px 10px;
+  background-repeat: no-repeat;
+  background-position: right;
 `;
